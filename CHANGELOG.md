@@ -1,5 +1,46 @@
 # Changelog
 
+## [1.36.0](https://github.com/career-ops-hq/career-ops/compare/career-ops-v1.35.0...career-ops-v1.36.0) (2026-10-02)
+
+
+### Features
+
+* **contacts:** extract a recruiter/interviewer contact from a pasted reply ([#4363](https://github.com/career-ops-hq/career-ops/issues/4363)) ([1934b3e](https://github.com/career-ops-hq/career-ops/commit/1934b3e76af46173097a7eba4e6e5cde3468a8a9))
+* **cv-templates:** add atsLint, with the ATS rules as data in templates/ats-rules.yml ([#3900](https://github.com/career-ops-hq/career-ops/issues/3900)) ([6f1a74e](https://github.com/career-ops-hq/career-ops/commit/6f1a74e8e37119f01a68a397187025e7dacc804a))
+* explain evidence confidence behind evaluation scores ([#4452](https://github.com/career-ops-hq/career-ops/issues/4452)) ([1a9a76b](https://github.com/career-ops-hq/career-ops/commit/1a9a76bc4730ef7ff0368f4034dda24c1ab83ede))
+* **gojobs:** add offline GO Jobs HTML import ([#4016](https://github.com/career-ops-hq/career-ops/issues/4016)) ([d35cf64](https://github.com/career-ops-hq/career-ops/commit/d35cf64daa16e86be9845fd6ab9a186097449d28))
+* **i18n:** report structural drift across translated modes ([#4643](https://github.com/career-ops-hq/career-ops/issues/4643)) ([a8a71f5](https://github.com/career-ops-hq/career-ops/commit/a8a71f51ab86cf4f28369ddb46460b179d715758))
+* **i18n:** support language.modes_dir as a list of declared markets ([#3798](https://github.com/career-ops-hq/career-ops/issues/3798)) ([d31a138](https://github.com/career-ops-hq/career-ops/commit/d31a138e8b3dc1971a43e15931623112c8a83246))
+* **providers:** add JazzHR zero-auth provider ([#4307](https://github.com/career-ops-hq/career-ops/issues/4307)) ([a18a644](https://github.com/career-ops-hq/career-ops/commit/a18a644d36c178822e1d5f23d16823b3cdeb9c71))
+* **scan:** add ADP Workforce Now provider ([#3729](https://github.com/career-ops-hq/career-ops/issues/3729)) ([b67e254](https://github.com/career-ops-hq/career-ops/commit/b67e2546fe3a59782f2c582091f77a791d96a497))
+* **scan:** add Dayforce scanner (scan-dayforce.mjs, Playwright-based) ([#3734](https://github.com/career-ops-hq/career-ops/issues/3734)) ([b4de1df](https://github.com/career-ops-hq/career-ops/commit/b4de1df785d19ba56870f2236f746518ba56daf2))
+* **scan:** add Taleo public career-section provider ([#3743](https://github.com/career-ops-hq/career-ops/issues/3743)) ([b922c8c](https://github.com/career-ops-hq/career-ops/commit/b922c8c1d4c019bf0529215c8fa78d483a4e1350))
+* **scan:** add UKG Pro/UltiPro provider ([#3733](https://github.com/career-ops-hq/career-ops/issues/3733)) ([76e0616](https://github.com/career-ops-hq/career-ops/commit/76e0616b68a0034fea92f70d87ec67c341add88f))
+* **scan:** record what the location and posting-age filters drop ([#4321](https://github.com/career-ops-hq/career-ops/issues/4321)) ([b17e77c](https://github.com/career-ops-hq/career-ops/commit/b17e77cef9ec317d480de085b55e8714045631b3))
+* **scan:** seed ATS sweep from application history ([#3912](https://github.com/career-ops-hq/career-ops/issues/3912)) ([43910e4](https://github.com/career-ops-hq/career-ops/commit/43910e4447401730aea6458a661291b7e42627a1))
+* **session-activity:** advisory in-progress claims for concurrent sessions ([#4536](https://github.com/career-ops-hq/career-ops/issues/4536)) ([b02a8d6](https://github.com/career-ops-hq/career-ops/commit/b02a8d6a3bc3024f5c6b0c038b99ac2342f8b108))
+* zero-LLM CV title-consistency check for pdf.md tailoring ([#2678](https://github.com/career-ops-hq/career-ops/issues/2678)) ([9f0eec7](https://github.com/career-ops-hq/career-ops/commit/9f0eec7536b16579e465fe5d29770922770403e9))
+
+
+### Bug Fixes
+
+* **agents:** scope onboarding and keep diagnostics read-only ([#4428](https://github.com/career-ops-hq/career-ops/issues/4428)) ([2aeb555](https://github.com/career-ops-hq/career-ops/commit/2aeb5555fad84cb0f30ffa8e034391de11d40c06))
+* **apply:** source form fields from the tailored CV instead of cv.md ([#4412](https://github.com/career-ops-hq/career-ops/issues/4412)) ([c2681c6](https://github.com/career-ops-hq/career-ops/commit/c2681c6de156be4624aca8d2298cc60a9d331742))
+* **archive-posting,application-answers:** date records by the local calendar ([#4544](https://github.com/career-ops-hq/career-ops/issues/4544)) ([ec16f68](https://github.com/career-ops-hq/career-ops/commit/ec16f680ee3372e35b214c541c1d1e4d3171bf58))
+* **dashboard:** render unevaluated rows as the sentinel, not "0.0" ([#2760](https://github.com/career-ops-hq/career-ops/issues/2760)) ([2511791](https://github.com/career-ops-hq/career-ops/commit/2511791c1c47e0f67a1c563dd8e863fa75351af4))
+* **generate-pdf:** derive workspace root before canonicalizing the tracker ([#3169](https://github.com/career-ops-hq/career-ops/issues/3169)) ([#3191](https://github.com/career-ops-hq/career-ops/issues/3191)) ([91ee04c](https://github.com/career-ops-hq/career-ops/commit/91ee04c8215ccfc096c4259c7235f6a52f0f4614))
+* **greenhouse:** resolve legacy boards.greenhouse.io careers_url ([#4195](https://github.com/career-ops-hq/career-ops/issues/4195)) ([5367abb](https://github.com/career-ops-hq/career-ops/commit/5367abb46918bdbb79950ca40795a2eb86dd8236))
+* handle dead postings in batch evaluation ([#4381](https://github.com/career-ops-hq/career-ops/issues/4381)) ([bd24097](https://github.com/career-ops-hq/career-ops/commit/bd24097db73e1d680552a78d5be771423345b3bb))
+* **pipeline:** break sort ties on the row number, so newest-first reorders a date ([#4333](https://github.com/career-ops-hq/career-ops/issues/4333)) ([c4f2c3f](https://github.com/career-ops-hq/career-ops/commit/c4f2c3fcbd22979143a0e6115bd2718a820ac41b))
+* **salary-gap:** resolve column 1 as a tracker#, not a report# ([#4368](https://github.com/career-ops-hq/career-ops/issues/4368)) ([2fd2ccf](https://github.com/career-ops-hq/career-ops/commit/2fd2ccf62363811e31524733c057451c257b1737))
+* **scan:** support trusted proxy egress for provider requests ([#4445](https://github.com/career-ops-hq/career-ops/issues/4445)) ([c034621](https://github.com/career-ops-hq/career-ops/commit/c0346214b367b1edf1577b2e2b8103b7b6143da3))
+* **shared:** let _profile.md define the archetypes, and allow "none of these" ([#2690](https://github.com/career-ops-hq/career-ops/issues/2690)) ([d4b2f8e](https://github.com/career-ops-hq/career-ops/commit/d4b2f8e0984e54c541f392e9a5b700432e8f1ebb))
+* **story-bank:** three readers, three roots — and a safety gate split across two ([#3985](https://github.com/career-ops-hq/career-ops/issues/3985)) ([cbae0bd](https://github.com/career-ops-hq/career-ops/commit/cbae0bd5589f42673bccbaac4a4fd2b0dc54bf6b))
+* **tracker:** allow correcting stale notes without hand-editing ([#4494](https://github.com/career-ops-hq/career-ops/issues/4494)) ([5385f3a](https://github.com/career-ops-hq/career-ops/commit/5385f3a2e9c2dc873b56744856a2dbe4f6fcf153))
+* **update-system:** exempt a user-configured named template variant from the templates/ prune ([#3700](https://github.com/career-ops-hq/career-ops/issues/3700)) ([65ee5ea](https://github.com/career-ops-hq/career-ops/commit/65ee5ead2c9ca1d603b7d2b8eaccfc2437bf1c24))
+* **update-system:** keep protecting a customization an update preserved ([#4341](https://github.com/career-ops-hq/career-ops/issues/4341)) ([a395e67](https://github.com/career-ops-hq/career-ops/commit/a395e6790f1debba66de54fde3d5d81f5151b273))
+* **update-system:** refuse manifest entries that name the user layer ([#3947](https://github.com/career-ops-hq/career-ops/issues/3947)) ([625a82c](https://github.com/career-ops-hq/career-ops/commit/625a82c29ab96747355f8717dc63ce359a3c75e4))
+
 ## [1.35.0](https://github.com/career-ops-hq/career-ops/compare/career-ops-v1.34.0...career-ops-v1.35.0) (2026-10-01)
 
 
